@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign project_slug = page.project_slug %}
+    {% if project_slug %}
+      {% capture project_root %}/{{ project_slug }}/{% endcapture %}
+      {% capture project_terms %}/{{ project_slug }}/terms/{% endcapture %}
+      {% capture project_privacy %}/{{ project_slug }}/privacy/{% endcapture %}
+    {% endif %}
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <nav class="site-nav" aria-label="Legal navigation">
+          <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+          {% if project_slug %}
+          <a href="{{ project_root | relative_url }}"{% if page.url == project_root %} aria-current="page"{% endif %}>{{ page.project_name }}</a>
+          <a href="{{ project_terms | relative_url }}"{% if page.url == project_terms %} aria-current="page"{% endif %}>Terms</a>
+          <a href="{{ project_privacy | relative_url }}"{% if page.url == project_privacy %} aria-current="page"{% endif %}>Privacy</a>
+          {% endif %}
+        </nav>
+      </header>
+
+      <main class="content-card">
+        {% if page.title %}
+        {% if page.project_name %}
+        <p class="eyebrow">{{ page.project_name }}</p>
+        {% elsif page.eyebrow %}
+        <p class="eyebrow">{{ page.eyebrow }}</p>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        {% endif %}
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <p>This repository publishes legal documents only. No application source code is hosted here.</p>
+      </footer>
+    </div>
+  </body>
+</html>

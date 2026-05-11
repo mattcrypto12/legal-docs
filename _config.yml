@@ -1,0 +1,12 @@
+title: Legal Docs
+description: Public legal documents for apps and projects.
+baseurl: "/legal-docs"
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: pretty
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

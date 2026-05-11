@@ -1,0 +1,204 @@
+:root {
+  --page-bg: #09111f;
+  --page-bg-accent: #1c2d4b;
+  --card-bg: rgba(8, 13, 24, 0.84);
+  --card-border: rgba(149, 186, 255, 0.18);
+  --text-main: #eef4ff;
+  --text-muted: #aab7d1;
+  --accent: #74d7ff;
+  --accent-strong: #9d70ff;
+  --link: #9dd9ff;
+  --link-hover: #ffffff;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+  --radius-lg: 24px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at top right, rgba(157, 112, 255, 0.24), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(116, 215, 255, 0.16), transparent 34%),
+    linear-gradient(145deg, var(--page-bg), var(--page-bg-accent));
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.page-shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-nav a {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.site-nav a[aria-current="page"] {
+  border-color: rgba(116, 215, 255, 0.34);
+  background: rgba(116, 215, 255, 0.1);
+}
+
+.content-card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+  margin-top: 32px;
+  font-size: 1.3rem;
+}
+
+h3 {
+  margin-top: 22px;
+  font-size: 1.05rem;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 16px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+strong {
+  color: #ffffff;
+}
+
+blockquote,
+.callout {
+  margin: 20px 0;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(157, 112, 255, 0.24);
+  background: rgba(157, 112, 255, 0.08);
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.doc-link {
+  display: block;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.doc-link:hover {
+  transform: translateY(-1px);
+  border-color: rgba(116, 215, 255, 0.38);
+  background: rgba(116, 215, 255, 0.08);
+}
+
+.doc-link strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+}
+
+.site-footer {
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+code {
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding: 18px 14px 28px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content-card {
+    padding: 22px 18px;
+  }
+}
