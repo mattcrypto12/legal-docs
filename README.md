@@ -10,20 +10,30 @@ It is designed so app repositories can stay private while reviewers and users st
 - `wings-of-sol/index.md` - project landing page
 - `wings-of-sol/terms.md` - Wings of Sol Terms of Use
 - `wings-of-sol/privacy.md` - Wings of Sol Privacy Policy
+- `rentquest/index.md` - project landing page
+- `rentquest/terms.md` - RentQuest Terms of Use
+- `rentquest/privacy.md` - RentQuest Privacy Policy
 - `_layouts/default.html` - shared site layout
 - `assets/styles.css` - site styling
 - `_config.yml` - GitHub Pages / Jekyll config
 
-## Current Project
+## Current Projects
 
-This repo currently includes legal pages for Wings of Sol using these values:
+This repo currently includes legal pages for Wings of Sol and RentQuest using these shared defaults:
 
 - Operator: Matt Crypto
 - Support email: matt.crypto1212@gmail.com
 - Governing law: Tennessee, USA
 - Venue: Nashville, Tennessee
-- Website link: points to the Wings of Sol legal section on the published site
+- Website link: points to the project-specific legal section on the published site
 - Mailing address: removed
+
+RentQuest-specific notes currently reflected in its legal pages:
+
+- Solana mobile utility for scanning and closing empty token accounts
+- Batch close transactions to reclaim SOL rent deposits
+- Local history, stats, achievements, and network settings
+- Firebase Analytics and Firebase Crashlytics are disclosed in the Privacy Policy
 
 If you later want to switch from a personal name to a company name, update the project pages before republishing.
 
@@ -43,7 +53,7 @@ Then add that project to the root `index.md` list.
 2. Create a new public GitHub repository, ideally named `legal-docs`.
 3. Add the remote:
 
-   `git remote add origin https://github.com/YOUR-USERNAME/legal-docs.git`
+   `git remote add origin https://github.com/mattcrypto12/legal-docs.git`
 
 4. Commit and push:
 
@@ -58,9 +68,13 @@ Then add that project to the root `index.md` list.
 
 Your public URLs should then look like:
 
-- `https://YOUR-USERNAME.github.io/legal-docs/`
-- `https://YOUR-USERNAME.github.io/legal-docs/wings-of-sol/terms/`
-- `https://YOUR-USERNAME.github.io/legal-docs/wings-of-sol/privacy/`
+- `https://mattcrypto12.github.io/legal-docs/`
+- `https://mattcrypto12.github.io/legal-docs/wings-of-sol/terms/`
+- `https://mattcrypto12.github.io/legal-docs/wings-of-sol/privacy/`
+- `https://mattcrypto12.github.io/legal-docs/rentquest/terms/`
+- `https://mattcrypto12.github.io/legal-docs/rentquest/privacy/`
+
+If you fork or recreate this repo under a different account, replace `mattcrypto12` in the URLs above.
 
 ## If The Repo Name Changes
 
