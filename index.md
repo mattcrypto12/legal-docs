@@ -7,6 +7,10 @@ eyebrow: Legal docs repository
 This site hosts public legal documents for multiple apps and projects.
 
 <div class="doc-grid">
+  <a class="doc-link" href="{{ '/seedauth/' | relative_url }}">
+    <strong>SeedAuth</strong>
+    Terms of Use and Privacy Policy for the SeedAuth mobile app.
+  </a>
   <a class="doc-link" href="{{ '/wings-of-sol/' | relative_url }}">
     <strong>Wings of Sol</strong>
     Terms of Use and Privacy Policy for the Wings of Sol mobile app.
